@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightshade Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-container">
+    <header>
+      <h1>Nightshade</h1>
+      <p class="subtitle">Focus & Flourish</p>
+    </header>
+
+    <form id="task-form" class="task-form">
+      <!-- Visually hidden label for screen readers -->
+      <label for="task-input" class="sr-only">Add a new task</label>
+      <input type="text" id="task-input" placeholder="What needs to be done?" required aria-required="true">
+      <button type="submit" aria-label="Add task">+</button>
+    </form>
+
+    <ul id="task-list" class="task-list" aria-live="polite">
+      <!-- Tasks will be injected here via JavaScript -->
+    </ul>
+  </main>
+
+  <!-- ARIA Live Region for Screen Reader Announcements -->
+  <div id="self-care-toast" class="toast hidden" role="status" aria-live="polite">
+    <span id="toast-message">Remember to hydrate!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
